@@ -6,6 +6,6 @@ var router = express.Router();
 router.get('/', indexController.index);
 
 /* get detalle de menu page */
-router.get('detalle/:id', indexController.detail,)
+router.get('/detail/:menuId', indexController.detail)
 
 module.exports = router;

@@ -40,10 +40,13 @@ const menuDelDia = [
 
 const indexController = {
     index: (req, res) => {
-        res.render(index, {about: about,menu: menuDelDia});
+        res.render('index', {about: about,menu: menuDelDia});
     },
     detail: (req, res) => {
-        res.render(detail);
+        let plato= menuDelDia.find(plato => plato.id == req.params.menuId);
+        res.render('detalleMenu',{plato:plato});
+  
+        
     }
 }
 module.exports = indexController;
